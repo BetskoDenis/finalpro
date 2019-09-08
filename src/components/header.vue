@@ -3,7 +3,8 @@
         <div class="container">
             <div class="header__wrapper">
                 <div class="logo_header__wrapper">
-                    <div class="cable"></div><a href="#section_one" class="logo_header off"></a>
+                    <div class="cable"></div>
+                    <a href="#section_one" class="logo_header off"></a>
                 </div>
                 <div class="burger_menu_button"><span></span></div>
             </div>

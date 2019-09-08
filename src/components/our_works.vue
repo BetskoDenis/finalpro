@@ -72,7 +72,8 @@
                             <p>JavaScript</p>
                             <p>JQuery</p>
                         </div>
-                        <div class="button__wrapper left_line"><a href="boostfolia.html" class="button_line_our_works">Подробнее</a></div>
+                        <div class="button__wrapper left_line">
+                            <a href="boostfolia.html" class="button_line_our_works">Подробнее</a></div>
                     </div>
                 </div>
             </div>
