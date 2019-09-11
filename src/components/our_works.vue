@@ -40,7 +40,7 @@
                             <p>JQuery</p>
                             <p>Разработка индивидуального дизайна шаблона</p>
                         </div>
-                        <div class="button__wrapper left_line"><a href="force_farma.html" class="button_line_our_works">Подробнее</a></div>
+                        <div class="button__wrapper left_line"><router-link to="/Farma" class="button_line_our_works">Подробнее</router-link></div>
                     </div>
                 </div>
                 <div class="our_works_item__line">
@@ -56,7 +56,7 @@
                             <p>JavaScript</p>
                             <p>JQuery</p>
                         </div>
-                        <div class="button__wrapper"><a href="Alexis.html" class="button_line_our_works">Подробнее</a></div>
+                        <div class="button__wrapper"><router-link to="/Alexis" class="button_line_our_works">Подробнее</router-link></div>
                     </div>
                     <div class="our_works_item right black"><img src="../img/Alexis_new.png"></div>
                 </div>
@@ -75,13 +75,17 @@
                             <p>JQuery</p>
                         </div>
                         <div class="button__wrapper left_line">
-                            <a href="boostfolia.html" class="button_line_our_works">Подробнее</a></div>
+                            <router-link to="/Boost" class="button_line_our_works">Подробнее</router-link></div>
                     </div>
                 </div>
             </div>
+
+            <div class="button_line_two">
+            <router-link to="/" class="button_line_our_works_two">На главную</router-link>
+        </div>
         </div>
     </section>
-</div>
+
 </template>
 
 
@@ -263,4 +267,44 @@
         box-shadow: 9px 9px 15px 5px rgba(0, 0, 0, 0.7);
         -webkit-border-radius: 10px;
         border-radius: 10px; }
+    .button_line_two{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+ .button_line_our_works_two {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        text-align: center;
+        height: 65px;
+        width: 175px;
+        background-image: url("../img/button_our_works.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        font-family: 'beer', sans-serif;
+        font-size: 25px;
+        color: #282828; }
+  .button_line_our_works_two:hover {
+        -webkit-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        transform: scale(0.98); }
 </style>

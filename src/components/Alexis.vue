@@ -4,58 +4,36 @@
             <div class="top_single__wrapper">
                 <div class="single__wrapper">
                     <div class="slider__wrapper">
-                    <div id="sync1" class="thumbnails owl-carousel owl-theme">
-                        <div class="item">
-                            <img src="../img/SEM_TM.png">
+                        <div id="sync1" class="thumbnails owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="../img/Alexis_new.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis1.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis2.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis3.png">
+                            </div>
+
                         </div>
-                        <div class="item">
-                            <img src="../img/single/semtm1.png">
+                        <div id="sync2" class="thumbnailsBottom owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="../img/Alexis_new.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis1.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis2.png">
+                            </div>
+                            <div class="item">
+                                <img src="../img/single/alexis3.png">
+                            </div>
+
                         </div>
-                        <div class="item">
-                            <img src="../img/single/semtm2.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm3.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm4.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm5.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm6.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm7.png">
-                        </div>
-                    </div>
-                    <div id="sync2" class="thumbnailsBottom owl-carousel owl-theme">
-                        <div class="item">
-                            <img src="../img/SEM_TM.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm1.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm2.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm3.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm4.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm5.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm6.png">
-                        </div>
-                        <div class="item">
-                            <img src="../img/single/semtm7.png">
-                        </div>
-                    </div>
                     </div>
                     <div class="description_work">
                         <h4>Торговая марка SEM</h4>
@@ -77,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -85,7 +63,7 @@
 <script>
 
     export default {
-        name: 'SEM_TM',
+        name: 'Alexis',
         mounted (){
             var sync1 = $("#sync1");
             var sync2 = $("#sync2");
@@ -174,11 +152,11 @@
     @import "../libs/single_work.css";
 
 
-.button_line{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+    .button_line{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     .single_work .top_single__wrapper .description_work .technology__wrapper .button_line .button_line_our_works {
         display: -webkit-box;
         display: -webkit-flex;
@@ -210,9 +188,9 @@
         font-family: 'beer', sans-serif;
         font-size: 25px;
         color: #282828; }
-.technology__wrapper .button_line_our_works:hover {
-    -webkit-transform: scale(0.98);
-    -ms-transform: scale(0.98);
-    transform: scale(0.98); }
+    .technology__wrapper .button_line_our_works:hover {
+        -webkit-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        transform: scale(0.98); }
 
 </style>
