@@ -9,17 +9,17 @@ import SEM from './components/SEM.vue'
 
 export default new VueRouter({
 
-    routes:[
-     {
-        path: '',
-        component: Home
-     },
-    {
-        path: '/our_works',
-        component: our_works,
+    routes: [
+        {
+            path: '/',
+            component: Home
+        },
+        {
+            path: '/our_works',
+            component: our_works,
 
 
-    },
+        },
         {
             path: '/SEM',
             component: SEM,
@@ -36,7 +36,7 @@ export default new VueRouter({
             }
         }
     },
-    mode:'history'
+    mode: 'history'
+
+
 })
-
-

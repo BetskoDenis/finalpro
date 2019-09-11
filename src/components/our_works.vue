@@ -1,5 +1,7 @@
 <template>
+
     <section class="our_works">
+
         <div class="container">
             <div class="our_works__wrapper">
                 <div class="headline">
@@ -79,12 +81,15 @@
             </div>
         </div>
     </section>
+</div>
 </template>
 
 
 <script>
+
     export default {
         name: 'our_works'
+
     }
 </script>
 

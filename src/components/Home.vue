@@ -12,6 +12,7 @@
 
 <script>
 
+
     import SectionOne from './section_one.vue'
     import SectionTwo from './section_two.vue'
     import SectionThree from './section_three.vue'
@@ -116,6 +117,20 @@
                 });
             }
 
+            $(".menu").on('click','a', function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1000);
+            });
+
+            $(".logo_header__wrapper").on('click','a', function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1000);
+            });
+
             function slider() {
                 var width1 = $(window).width()
                 if(width1 >= 900){
@@ -126,6 +141,9 @@
                 }
             }
             slider()
+
+
+
         }
     }
 

@@ -71,7 +71,7 @@
                             <p>Разработка индивидуального дизайна шаблона</p>
                             <a href="https://github.com/BetskoDenis/SEM_TM">Посмотреть проект на GitHub</a>
                             <div class="button_line">
-                                <a href="#" class="button_line_our_works">К списку работ</a>
+                                <router-link to="/our_works" class="button_line_our_works">К списку работ</router-link>
                             </div>
 
                         </div>

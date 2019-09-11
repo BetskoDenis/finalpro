@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <General/>
-    <Header/>
+      <Header/>
     <router-view/>
 
   </div>
@@ -18,7 +18,7 @@
   name: 'app',
   components: {
     General,
-    Header,
+      Header
 
   }
 }

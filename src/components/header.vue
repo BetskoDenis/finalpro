@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <div class="header__wrapper">
+            <div class="header__wrapper" id="header__wrapper">
                 <div class="logo_header__wrapper">
                     <div class="cable"></div>
                     <a href="#section_one" class="logo_header off"></a>
@@ -17,28 +17,176 @@
                 <p>NU</p><span>MENU</span><img src="../img/steampunk_gear_png_by_lavitadistress-d6rdgyk.png">
             </div>
             <div class="menu_dark_item">
-                <nav class="menu">
+                <nav class="menu" id="menu">
                     <ul>
-                        <li><router-link to="/#section_one">Главная</router-link></li>
-                        <li><router-link to="/#section_two">О нас</router-link></li>
-                        <li><a href="#section_three">Портфолио</a></li>
-                        <li><a href="#section_four">Услуги и цены</a></li>
-                        <li><a href="#section_five">Обратная связь</a></li>
+                        <li v-if="curr"><router-link to="/#section_one">Главная</router-link></li>
+                        <li v-else = 'curr'><a href="#section_one">Главная</a></li>
+                        <li v-if="curr"><router-link to="/#section_two">О нас</router-link></li>
+                        <li v-else = 'curr'><a to="#section_two">О нас</a></li>
+                        <li v-if="curr"><router-link to="/#section_three">Портфолио</router-link></li>
+                        <li v-else = 'curr'><a href="#section_three">Портфолио</a></li>
+                        <li v-if="curr"><router-link to="/#section_four">Услуги и цены</router-link></li>
+                        <li v-else = 'curr'><a href="#section_four">Услуги и цены</a></li>
+                        <li v-if="curr"><router-link to="/#section_five">Обратная связь</router-link></li>
+                        <li v-else = 'curr'><a href="#section_five">Обратная связь</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 </template>
-
 <script>
-
 
     export default {
         name: 'Header',
+        mounted(){
+            function burgerButton(){
+                if($('.burger_menu_button').hasClass('active')){
+                    $('.burger_menu_button').removeClass('active')
+                    $('.menu_dark').removeClass('PC')
+                    $('.menu_dark').removeClass('mobile')
+                    $('.menu_dark').removeClass('tablet')
 
-    }
+                }else{
+                    $('.burger_menu_button').addClass('active')
+                }
+            }
 
+            function menuShow(){
+                var width = $('body').width()
+
+                if($('.burger_menu_button').hasClass('active') && width >= 1200){
+                    $('.menu_dark').addClass('PC')
+                    $('.menu_dark').css('display','flex')
+                    $('.menu_dark_item').css('opacity', '1')
+                    $('.menu_dark_item:nth-child(1)').css('transform', 'translateX(0)')
+
+                    setTimeout(function () {
+                        $('.menu_dark_item:nth-child(2)').css('transform', 'translateX(0)')
+                    },100)
+                    setTimeout(function () {
+                        $('.menu_dark_item:nth-child(3)').css('transform', 'translateX(0)')
+
+
+                    },200)
+                    setTimeout(function () {
+                        $('.menu').css('opacity', '1')
+                        $('.menu_dark_item p').css('transform', 'translateX(0)')
+                        $('.menu_dark_item img').css('transform', 'translateX(0)')
+                        $('.menu').css('transform', 'translateX(0)')
+
+                    },800)
+                    setTimeout(function () {
+                        $('.cable').css('height', '100px')
+
+                    },1200)
+                    setTimeout(function () {
+                        $('.logo_header').addClass('on')
+                        $('.logo_header').removeClass('off')
+                        $('.menu_dark_item p').css('text-shadow', '20px 20px 10px rgba(100, 100, 100, .7)')
+                    },2000)
+
+                }
+
+                else if($('.burger_menu_button').hasClass('active') && width <= 550){
+                    $('.menu_dark').addClass('mobile')
+                    $('.menu_dark_item').css('opacity', '1')
+                    $('.menu_dark').css('display','flex')
+                    setTimeout(function () {
+
+                        $('.menu_dark_item:nth-child(3)').css('transform', 'translateX(0)')
+                        $('.menu').css('transform', 'translateX(0)')
+                    },10)
+                    setTimeout(function () {
+
+                        $('.cable').css('height', '60px')
+                    },500)
+                    setTimeout(function () {
+                        $('.logo_header').addClass('on')
+                        $('.logo_header').removeClass('off')
+                        $('.menu').css('opacity', '1')
+                    },1000)
+                }
+                else if($('.burger_menu_button').hasClass('active') && width >= 550 && width<=1200){
+                    $('.menu_dark').css('display','flex')
+                    $('.menu_dark').addClass('tablet')
+                    $('.menu_dark_item').css('opacity', '1')
+                    $('.menu_dark_item:nth-child(2)').css('transform', 'translateX(0)')
+
+                    setTimeout(function () {
+                        $('.menu_dark_item:nth-child(3)').css('transform', 'translateX(0)')
+
+                    },100)
+                    setTimeout(function () {
+                        $('.menu_dark_item span').css('opacity', '1')
+                        $('.menu').css('opacity', '1')
+                        $('.menu').css('transform', 'translateX(0)')
+                    },800)
+                    setTimeout(function () {
+                        $('.cable').css('height', '100px')
+
+                    },1200)
+                    setTimeout(function () {
+                        $('.logo_header').addClass('on')
+                        $('.logo_header').removeClass('off')
+                        $('.menu_dark_item span').css('text-shadow', '20px 20px 10px rgba(100, 100, 100, .7)')
+                    },2000)
+                }else{
+                    $('.menu_dark').css('display','none')
+                    $('.menu_dark_item p').css('text-shadow', '0px 0px 0px ')
+                    $('.menu_dark_item span').css('text-shadow', '0px 0px 0px ')
+                    $('.logo_header').addClass('off')
+                    $('.logo_header').removeClass('on')
+                    $('.cable').css('height', '5px')
+                    $('.menu_dark_item p').css('transform', 'translateX(-500%)')
+                    $('.menu_dark_item img').css('transform', 'translateX(-500%)')
+                    $('.menu').css('transform', 'translateX(500%)')
+                    $('.menu_dark_item:nth-child(3)').css('transform', 'translateX(-500%)')
+                    $('.menu').css('opacity', '0')
+                    setTimeout(function () {
+                        $('.menu_dark_item:nth-child(2)').css('transform', 'translateX(-300%)')
+                    },200)
+                    setTimeout(function () {
+                        $('.menu_dark_item').css('opacity', '0')
+                        $('.menu_dark_item:nth-child(1)').css('transform', 'translateX(-100%)')
+                    },500)
+                    setTimeout(function () {
+                        $('.menu_dark').css('display','none')
+                    },1500)
+                }
+            }
+
+
+            $('.burger_menu_button').on('click',function () {
+                burgerButton()
+                menuShow()
+
+            })
+
+            $('.menu ul li a').on('click',function () {
+                burgerButton()
+                menuShow()
+            })
+            $('.logo_header__wrapper').on('click','.on',function () {
+                burgerButton()
+                menuShow()
+            })
+        },
+        data: function () {
+            var currentUrl = window.location.pathname;
+
+            if (currentUrl == '/') {
+                return {
+                    curr: false
+                }
+            } else {
+                return {
+                    curr: true
+                }
+            }
+        }
+
+        }
 
 </script>
 
