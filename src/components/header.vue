@@ -19,8 +19,8 @@
             <div class="menu_dark_item">
                 <nav class="menu">
                     <ul>
-                        <li><a href="#section_one">Главная</a></li>
-                        <li><a href="#section_two">О нас</a></li>
+                        <li><router-link to="/#section_one">Главная</router-link></li>
+                        <li><router-link to="/#section_two">О нас</router-link></li>
                         <li><a href="#section_three">Портфолио</a></li>
                         <li><a href="#section_four">Услуги и цены</a></li>
                         <li><a href="#section_five">Обратная связь</a></li>
@@ -32,9 +32,14 @@
 </template>
 
 <script>
+
+
     export default {
-        name: 'Header'
+        name: 'Header',
+
     }
+
+
 </script>
 
 <style>
